@@ -26,7 +26,7 @@ global $mysqli;
         <li>
           <img src="app/img/uwu.png">
           <div class="caption left-align black-text">
-            <h3>FIEBRE MUNDIALISTA</h3>
+            <h3>FIEBRE </h3>
             <h5>Apoya a tu seleccion preferida</h5>
           </div>
         </li>
