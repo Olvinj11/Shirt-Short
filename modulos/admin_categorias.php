@@ -7,31 +7,28 @@ global $urlweb;
     <thead>
         <tr>
             <th>Categoria</th>
-            <th>Icono</th>
-            <th>Cantidad</th>
+            <th>Descripcion</th>
+            <th>Icon</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
         <?php
-            $strsql ="SELECT productos.idproducto, productos.nombre_producto, categorias.nombre_categoria, productos.descripcion, productos.url_imagen, productos.precio, productos.cantidad FROM `productos` INNER JOIN categorias ON categorias.idcategoria=productos.idcategoria";
+            $strsql ="SELECT categorias.idcategoria, categorias.nombre_categoria, categorias.descripcion, categorias.url_icon FROM categorias";
             if($stmt = $mysqli->prepare($strsql)){
                 $stmt->execute();
                 $stmt->store_result();
                 if($stmt->num_rows >0){
-                    $stmt->bind_result($idproducto, $nombre_producto, $categoria, $descripcion, $url_imagen, $precio, $cantidad);
+                    $stmt->bind_result($idcategoria, $nombre_categoria, $descripcion, $url_icon);
                     while($stmt->fetch()){
                         ?>
-                        <tr id="<?php echo $idproducto ?>">
-                            <td><?php echo $nombre_producto?></td>
-                            <td><?php echo $categoria ?></td>
+                        <tr id="<?php echo $idcategoria ?>">
+                            <td><?php echo $nombre_categoria?></td>
                             <td><?php echo $descripcion?></td>
-                            <td><img src="<?php echo $url_imagen?>" alt="" width="150px"></td>
-                            <td><?php echo $precio ?></td>
-                            <td><?php echo $cantidad ?></td>
-                            <td><a href="<?php $urlweb ?>?modulo=editar_producto&idproducto=<?php echo $idproducto ?>" class="btn gray">Editar</a></td>
-                            <td><a class="btn red" href="javascript:eliminar(<?php echo $idproducto?>)">Eliminar</a></td>
+                            <td><img src="<?php echo $url_icon?>" alt="" width="150px"></td>
+                            <td><a href="<?php $urlweb ?>?modulo=editar_categoria&idcategoria=<?php echo $idcategoria ?>" class="btn gray">Editar</a></td>
+                            <td><a class="btn red" href="javascript:eliminar2(<?php echo $idcategoria?>)">Eliminar</a></td>
                         </tr>
                         <?php
                     }
@@ -42,26 +39,25 @@ global $urlweb;
                 echo "No se pudo encontrar la consulta";
             }
         ?>
-
     </tbody>
 </table>
-<a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_producto">Agregar productos</a>
+<a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_categoria">Agregar categorias</a>
 
 <a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_productos">Administrador de Productos</a>
 <script>
-    function eliminar(idproducto)
+    function eliminar2(idcategoria)
     {
-        var url = '<?php echo $urlweb ?>servicios/ws_admin_productos.php?accion=eliminar';
+        var url = '<?php echo $urlweb ?>servicios/ws_admin_categorias.php?accion=eliminar2';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                "idproducto": idproducto
+                "idcategoria": idcategoria
             })
         })
         .then((response)=> response.json())
         .then((data)=> {
             console.log(data)
-            const row = document.getElementById(idproducto);
+            const row = document.getElementById(idcategoria);
             row.remove();
             
         })
