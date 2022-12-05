@@ -6,11 +6,8 @@ global $urlweb;
 <table class="white centered">
     <thead>
         <tr>
-            <th>Producto</th>
             <th>Categoria</th>
-            <th>Descripcion</th>
-            <th>Imagen</th>
-            <th>Precio</th>
+            <th>Icono</th>
             <th>Cantidad</th>
             <th>Editar</th>
             <th>Eliminar</th>
