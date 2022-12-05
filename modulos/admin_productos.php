@@ -50,7 +50,7 @@ global $urlweb;
 </table>
 <a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_producto">Agregar productos</a>
 
-<a class="btn waves-light purple" href="">Administrador de Categorias</a>
+<a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_categorias">Administrador de Categorias</a>
 <script>
     function eliminar(idproducto)
     {
