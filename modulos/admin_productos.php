@@ -33,7 +33,7 @@ global $urlweb;
                             <td><img src="<?php echo $url_imagen?>" alt="" width="150px"></td>
                             <td><?php echo $precio ?></td>
                             <td><?php echo $cantidad ?></td>
-                            <td><a href="" class="btn gray">Editar</a></td>
+                            <td><a href="<?php $urlweb ?>?modulo=editar_producto&idproducto=<?php echo $idproducto ?>" class="btn gray">Editar</a></td>
                             <td><a class="btn red" href="javascript:eliminar(<?php echo $idproducto?>)">Eliminar</a></td>
                         </tr>
                         <?php
@@ -48,8 +48,9 @@ global $urlweb;
 
     </tbody>
 </table>
+<a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_producto">Agregar productos</a>
 
-<a class="btn waves-light" href="">Agregar productos</a>
+<a class="btn waves-light purple" href="">Administrador de Categorias</a>
 <script>
     function eliminar(idproducto)
     {
