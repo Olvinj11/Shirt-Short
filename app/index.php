@@ -56,7 +56,10 @@ global $urlweb;
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Contactos</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <p class="grey-text text-lighten-4">
+                  +504 9751-5711
+                  +504 9623-4287
+                </p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Síguenos</h5>
@@ -74,7 +77,7 @@ global $urlweb;
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2021 Shirt Shop, All rights reserved. 
+            © 2022 Shirt Shop, All rights reserved. 
             <a class="grey-text text-lighten-4 right" href="#!">@Olvinj11 in all Riot Games</a>
             </div>
           </div>
