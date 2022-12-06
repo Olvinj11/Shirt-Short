@@ -5,7 +5,7 @@ global $urlweb;
 <div class = "col s12 grey lighten-3">
     <br>
     <h3 class="center">Administrador de Categorias</h3>
-    <table class="centered">
+    <table class="centered responsive-table">
         <thead>
             <tr>
                 <th>Categoria</th>

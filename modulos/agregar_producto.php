@@ -3,43 +3,40 @@ global $mysqli;
 global $urlweb;
 ?>
 
-<div class="container">
+<div style="margin-bottom:20%;">
     <form class="col s12" method="POST">
-        <div class="row">
-            <div class="input-field col l4 m4 s6">
-                <input name="nombre_producto" type="text" class="validate">
+        <div class="row center">
+            <div class="col s12 card-panel black"><h5 class="white-text">Nuevo Producto</h5><h5></h5></div>
+            <div class="input-field col l7 m12 s12">
+                <input placeholder="" name="nombre_producto" type="text" class="validate">
                 <label>Nombre del Producto</label>
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="idcategoria" type="text" class="validate">
-                <label>ID de Consola</label>
+            <div class="input-field col l3 m12 s12">
+                <input placeholder="" name="url_imagen" type="text" class="validate">
+                <label>URL de la Imagen</label>
             </div>
-            <div class="input-field col l6 m6 s12">
-                <input name="descripcion" type="text" class="validate">
-                <label>Descripcion del Producto</label>
-            </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="url_imagen" type="text" class="validate">
-                <label>URL de Imagen</label>
-            </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="precio" type="text" class="validate">
+            <div class="input-field col l1 m6 s12">
+                <input placeholder="" name="precio" type="text" class="validate">
                 <label>Precio</label>
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="cantidad" type="text" class="validate">
+            <div class="input-field col l1 m6 s12">
+                <input placeholder="" name="cantidad" type="text" class="validate">
                 <label>Cantidad</label>
             </div>
-            
-            <button class="btn waves-effect waves-light" type="submit" name="agregar">Agregar Producto
-                <i class="material-icons right">send</i>
+            <div class="input-field col l10 m12 s12">
+                <input placeholder="" name="descripcion" type="text" class="validate">
+                <label>Descripcion del Producto</label>
+            </div>
+            <div class="input-field col l2 m12 s12">
+                <input placeholder="" name="idcategoria" type="text" class="validate">
+                <label>Id Categoria</label>
+            </div>
+            <a class="waves-effect black btn left" href="?modulo=admin_productos">Volver atras</a>
+            <button class="btn waves-effect green right" type="submit" name="agregar">Agregar producto
+                <i class="material-icons right">note_add</i>
             </button>
-            
         </div>
     </form>
-    <div>
-        <a class="waves-effect waves-light btn-small" href="?modulo=admin_productos">Volver a Admin</a>
-    </div>
 </div>
 
 <?php
@@ -61,17 +58,23 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto agregado de Manera Exitosa</h3>
+                <script>
+                    M.toast({html: 'Producto agregado exitosamente', classes: 'rounded'})
+                </script>
                 <?php
                 mysqli_close($mysqli);
             } else {
                 ?>
-                <h2>Error al agregar el producto.</h2>
+                <script>
+                    M.toast({html: 'Error', classes: 'rounded'})
+                </script>
                 <?php
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <script>
+                M.toast({html: 'Debe llenar todos los campos', classes: 'rounded'})
+            </script>
             <?php
         }
     }

@@ -23,7 +23,7 @@ global $urlweb;
           </ul>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="<?php $urlweb ?>?modulo=admin_productos"><i class="material-icons left">account_circle</i>INICIAR SESION</a></li>
+            <li><a href="<?php $urlweb ?>?modulo=admin_productos"><i class="material-icons left">account_circle</i>ADMINISTRADOR</a></li>
             <li><a href="badges.html" class="white-text"><i class="material-icons left">shopping_cart</i>MI CARRITO</a></li>
           </ul>
         </div>
@@ -31,7 +31,7 @@ global $urlweb;
     </nav>
   </div>
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="<?php $urlweb ?>?modulo=admin_productos">Iniciar Sesion</a></li>
+    <li><a href="<?php $urlweb ?>?modulo=admin_productos">Admin</a></li>
     <li><a href="badges.html">Mi Carrito</a></li>
   </ul>
   <script>

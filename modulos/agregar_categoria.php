@@ -3,31 +3,26 @@ global $mysqli;
 global $urlweb;
 ?>
 
-<div class="container">
+<div style="margin-bottom:20%;">
     <form class="col s12" method="POST">
-        <div class="row">
-            <div class="input-field col l4 m4 s6">
-                <input name="nombre_categoria" type="text" class="validate">
+        <div class="row center">
+            <div class="col s12 card-panel black"><h5 class="white-text">Nueva Categoria</h5><h5></h5></div>
+            <div class="input-field col l8 m4 s12">
+                <input placeholder="" name="nombre_categoria" type="text" class="validate">
                 <label>Nombre de la Categoria</label>
             </div>
-            <div class="input-field col l6 m6 s12">
-                <input name="descripcion" type="text" class="validate">
+            <div class="input-field col l4 m2 s12">
+                <input placeholder="" name="url_icon" type="text" class="validate">
+                <label>URL del Icono</label>
+            </div>
+            <div class="input-field col l12 m12 s12">
+                <input placeholder="" name="descripcion" type="text" class="validate">
                 <label>Descripcion de la Categoria</label>
             </div>
-            <div class="input-field col l2 m2 s6">
-                <input name="url_icon" type="text" class="validate">
-                <label>URL de Icono</label>
-            </div>
-            
-            <button class="btn waves-effect waves-light" type="submit" name="agregar">Agregar Categoria
-                <i class="material-icons right">send</i>
-            </button>
-            
+            <a class="waves-effect black btn left" href="?modulo=admin_categorias">Volver atras</a>
+            <button class="btn waves-effect green right" type="submit" name="agregar">Agregar categoria<i class="material-icons right">note_add</i></button>
         </div>
     </form>
-    <div>
-        <a class="waves-effect waves-light btn-small" href="?modulo=admin_categorias">Volver a Admin</a>
-    </div>
 </div>
 
 <?php
@@ -43,17 +38,23 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Categoria agregada de Manera Exitosa</h3>
+                <script>
+                    M.toast({html: 'Categoria agregada exitosamente', classes: 'rounded'})
+                </script>
                 <?php
                 mysqli_close($mysqli);
             } else {
                 ?>
-                <h2>Error al agregar la Categoria</h2>
+                <script>
+                    M.toast({html: 'Error', classes: 'rounded'})
+                </script>
                 <?php
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <script>
+                M.toast({html: 'Debe llenar todos los campos', classes: 'rounded'})
+            </script> 
             <?php
         }
     }
