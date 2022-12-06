@@ -74,13 +74,14 @@ global $urlweb;
         <div class="col l4 s12">
           <h5 class="white-text">Síguenos</h5>
           <ul>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.facebook.com/Olvinj11/" target="_blank"><img src="app/img/facebook.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.instagram.com/olvinj11/" target="_blank"><img src="app/img/instagram.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://paypal.me/olvinvarillas11?country.x=HN&locale.x=es_XC" target="_blank"><img src="app/img/paypal.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://open.spotify.com/user/12173377132?si=cbed78944c8f4bf0" target="_blank"><img src="app/img/spotify.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://twitter.com/Olvinj11" target="_blank"><img src="app/img/gorjeo.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.twitch.tv/olvinj11" target="_blank"><img src="app/img/twitch.png" alt="" width="10%"></a></li>
-            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.tiktok.com/@olvinj11" target="_blank"><img src="app/img/linkedin.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.facebook.com/Olvinj11/" target="_blank"><img class="responsive-img" src="app/img/facebook.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.instagram.com/olvinj11/" target="_blank"><img class="responsive-img" src="app/img/instagram.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://paypal.me/olvinvarillas11?country.x=HN&locale.x=es_XC" target="_blank"><img class="responsive-img" src="app/img/paypal.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://open.spotify.com/user/12173377132?si=cbed78944c8f4bf0" target="_blank"><img class="responsive-img" src="app/img/spotify.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://twitter.com/Olvinj11" target="_blank"><img class="responsive-img" src="app/img/gorjeo.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.twitch.tv/olvinj11" target="_blank"><img class="responsive-img" src="app/img/twitch.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.tiktok.com/@olvinj11" target="_blank"><img class="responsive-img" src="app/img/tiktok.png" alt="" width="8%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://github.com/Olvinj11" target="_blank"><img class="responsive-img" src="app/img/github.png" alt="" width="8%"></a></li>
           </ul>
         </div>
       </div>
