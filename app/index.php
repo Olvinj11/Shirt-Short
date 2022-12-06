@@ -21,7 +21,7 @@ global $urlweb;
           <ul class="hide-on-med-down">
             <li><a href="<?php echo $urlweb?>" class="brand-logo center-align"><img src="app/img/LOGO-B.png" alt="" width="78%"></a></li>
           </ul>
-          <a href="<?php $urlweb ?>?modulo=admin_productos" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="<?php $urlweb ?>?modulo=admin_productos" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">account_circle</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="<?php $urlweb ?>?modulo=admin_productos"><i class="material-icons left">account_circle</i>ADMINISTRADOR</a></li>
             <li><a href="badges.html" class="white-text"><i class="material-icons left">shopping_cart</i>MI CARRITO</a></li>
