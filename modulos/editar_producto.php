@@ -11,49 +11,44 @@ if($stmt = $mysqli->prepare($strsql)){
         $stmt->bind_result($idproducto, $nombre_producto, $categoria, $descripcion, $url_imagen, $precio, $cantidad);
         $stmt->fetch();
         ?>
-        <div class="container">
+        <div style="margin-bottom:20%;">
             <form class="col s12" method="POST">
-                <div class="row">
-                    <div class="input-field col l4 m4 s6">
-                        <input name="nombre_producto" type="text" class="validate">
+                <div class="row center">
+                    <div class="col s12 card-panel black"><h5 class="white-text">Actualizar Producto</h5><h5></h5></div>
+                    <div class="input-field col l10 m12 s12">
+                        <input placeholder="" name="nombre_producto" type="text" class="validate">
                         <?php echo $nombre_producto ?>
                         <label>Nombre del Producto</label>
                     </div>
-                    <div class="input-field col l2 m2 s6">
-                        <input name="idcategoria" type="text" class="validate">
+                    <div class="input-field col l2 m6 s12">
+                        <input placeholder="" name="idcategoria" type="text" class="validate">
                         <?php echo $categoria ?>
                         <label>Id de Categoria</label>
                     </div>
                     <div class="input-field col l6 m6 s12">
-                        <input name="descripcion" type="text" class="validate">
-                        <?php echo $descripcion?>
-                        <label>Descripcion del Producto</label>
-                    </div>
-                </div>
-                <div class="row">
-                <div class="input-field col l3 m3 s6">
-                        <input name="url_imagen" type="text" class="validate">
+                        <input placeholder="" name="url_imagen" type="text" class="validate">
                         <?php echo $url_imagen ?>
                         <label>URL de Imagen</label>
                     </div>
-                    <div class="input-field col l2 m2 s6">
-                        <input name="precio" type="text" class="validate">
+                    <div class="input-field col l3 m6 s12">
+                        <input placeholder="" name="precio" type="text" class="validate">
                         <?php echo $precio ?>
                         <label>Precio</label>
                     </div>
-                    <div class="input-field col l2 m2 s6">
-                        <input name="cantidad" type="text" class="validate">
+                    <div class="input-field col l3 m6 s12">
+                        <input placeholder="" name="cantidad" type="text" class="validate">
                         <label>Cantidad</label>
                         <?php echo $cantidad ?>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="edit">Actualizar Información de Producto
-                        <i class="material-icons right">send</i>
-                    </button>
+                    <div class="input-field col l12 m12 s12">
+                        <input placeholder="" name="descripcion" type="text" class="validate">
+                        <?php echo $descripcion?>
+                        <label>Descripcion del Producto</label>
+                    </div>
+                    <a class="waves-effect black btn" href="?modulo=admin_productos">Volver atras</a>
+                    <button class="btn waves-effect blue" type="submit" name="edit">Actualizar<i class="material-icons right">update</i></button>
                 </div>
             </form>
-            <div>
-                <a class="waves-effect waves-light btn-small" href="?modulo=admin_productos">Volver a Admin</a>
-            </div>
         </div>
         <?php
     }
@@ -75,17 +70,23 @@ if($stmt = $mysqli->prepare($strsql)){
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto actualizado de Manera Exitosa</h3>
+                <script>
+                    M.toast({html: 'Producto actualizado exitosamente', classes: 'rounded'})
+                </script>
                 <?php
                 mysqli_close($mysqli);
             } else {
                 ?>
-                <h2>Error al actualizar el producto.</h2>
+                <script>
+                    M.toast({html: 'Error en actualizar', classes: 'rounded'})
+                </script>
                 <?php
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <script>
+                M.toast({html: 'Debe llenar todos los campos', classes: 'rounded'})
+            </script>
             <?php
         }
     }
