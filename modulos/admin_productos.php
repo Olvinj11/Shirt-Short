@@ -2,22 +2,24 @@
 global $mysqli;
 global $urlweb;
 ?>
-<h3 class="center">Administrador de Productos</h3>
-<table class="white centered">
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Categoria</th>
-            <th>Descripcion</th>
-            <th>Imagen</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
+<div class = "col s12 grey lighten-3">
+    <br>
+    <h2 class="center">Administrador de Productos</h2>
+    <table class="centered">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Categoria</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
             $strsql ="SELECT productos.idproducto, productos.nombre_producto, categorias.nombre_categoria, productos.descripcion, productos.url_imagen, productos.precio, productos.cantidad FROM `productos` INNER JOIN categorias ON categorias.idcategoria=productos.idcategoria";
             if($stmt = $mysqli->prepare($strsql)){
                 $stmt->execute();
@@ -37,20 +39,23 @@ global $urlweb;
                             <td><a class="btn red" href="javascript:eliminar(<?php echo $idproducto?>)">Eliminar</a></td>
                         </tr>
                         <?php
+                        }
+                    }else{
+                        echo "No hay registros washo :(";
                     }
                 }else{
-                    echo "No hay registros washo :(";
+                    echo "No se pudo encontrar la consulta";
                 }
-            }else{
-                echo "No se pudo encontrar la consulta";
-            }
-        ?>
-
-    </tbody>
-</table>
-<a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_producto">Agregar productos</a>
-
-<a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_categorias">Administrador de Categorias</a>
+            ?>
+        </tbody>
+    </table>
+    <br>
+    <div class="col s12 m12 center">
+        <a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_categorias"><i class="material-icons left">desktop_mac</i>Administrador de Categorias</a>
+        <a class="btn waves-light blue" href="<?php $urlweb ?>?modulo=agregar_producto"><i class="material-icons left">add_circle_outline</i>Agregar productos</a>
+    </div>
+    <br>
+</div>
 <script>
     function eliminar(idproducto)
     {

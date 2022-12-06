@@ -2,19 +2,21 @@
 global $mysqli;
 global $urlweb;
 ?>
-<h3 class="center">Administrador de Categorias</h3>
-<table class="white centered">
-    <thead>
-        <tr>
-            <th>Categoria</th>
-            <th>Descripcion</th>
-            <th>Icon</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
+<div class = "col s12 grey lighten-3">
+    <br>
+    <h3 class="center">Administrador de Categorias</h3>
+    <table class="centered">
+        <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Descripcion</th>
+                <th>Icon</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
             $strsql ="SELECT categorias.idcategoria, categorias.nombre_categoria, categorias.descripcion, categorias.url_icon FROM categorias";
             if($stmt = $mysqli->prepare($strsql)){
                 $stmt->execute();
@@ -31,19 +33,23 @@ global $urlweb;
                             <td><a class="btn red" href="javascript:eliminar2(<?php echo $idcategoria?>)">Eliminar</a></td>
                         </tr>
                         <?php
+                        }
+                    }else{
+                        echo "No hay registros washo :(";
                     }
                 }else{
-                    echo "No hay registros washo :(";
+                    echo "No se pudo encontrar la consulta";
                 }
-            }else{
-                echo "No se pudo encontrar la consulta";
-            }
-        ?>
-    </tbody>
-</table>
-<a class="btn waves-light" href="<?php $urlweb ?>?modulo=agregar_categoria">Agregar categorias</a>
-
-<a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_productos">Administrador de Productos</a>
+            ?>
+        </tbody>
+    </table>
+    <br>
+    <div class="col s12 m12 center">
+        <a class="btn waves-light purple" href="<?php $urlweb ?>?modulo=admin_productos"><i class="material-icons left">desktop_mac</i>Administrador de Productos</a>
+        <a class="btn waves-light blue" href="<?php $urlweb ?>?modulo=agregar_categoria"><i class="material-icons left">add_circle_outline</i>Agregar categorias</a>
+    </div>
+    <br>
+</div>
 <script>
     function eliminar2(idcategoria)
     {

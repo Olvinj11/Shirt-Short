@@ -45,40 +45,51 @@ global $urlweb;
   </script>
   
   <div class="container">
-    <div id="col s12">
+    <div id="col s12" style="margin-bottom: 2%;">
       <?php $funciones->openModule($modulo);?>
     </div>
   </div>
   <footer class="page-footer black">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Contactos</h5>
-                <p class="grey-text text-lighten-4">
-                  +504 9751-5711
-                  +504 9623-4287
-                </p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Síguenos</h5>
-                <ul>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.facebook.com/Olvinj11/" target="_blank"><img src="app/img/facebook.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.instagram.com/olvinj11/" target="_blank"><img src="app/img/instagram.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://paypal.me/olvinvarillas11?country.x=HN&locale.x=es_XC" target="_blank"><img src="app/img/paypal.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://open.spotify.com/user/12173377132?si=cbed78944c8f4bf0" target="_blank"><img src="app/img/spotify.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://twitter.com/Olvinj11" target="_blank"><img src="app/img/gorjeo.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.twitch.tv/olvinj11" target="_blank"><img src="app/img/twitch.png" alt="" width="10%"></a></li>
-                  <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.tiktok.com/@olvinj11" target="_blank"><img src="app/img/linkedin.png" alt="" width="10%"></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2022 Shirt Shop, All rights reserved. 
-            <a class="grey-text text-lighten-4 right" href="#!">@Olvinj11 in all Riot Games</a>
-            </div>
-          </div>
-        </footer>
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text">Contactos</h5>
+          <p class="grey-text text-lighten-4">
+            <ul>
+              <li><i class="material-icons left">local_phone</i>Linea de atencion al cliente<br>+504 9751-5711</li>
+              <li><i class="material-icons left">email</i>Correo electronico<br>atencion.cliente@shirtshop.com</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text">Acerca de Nosotros</h5>
+          <p class="grey-text text-lighten-4">
+            <ul>
+              <li><a href="#" class="white-text">Nuestra historia</a></li>
+              <li><a href="#" class="white-text">Trabaja con nosotros</a></li>
+              <li><a href="#" class="white-text">Politicas de privacidad</a></li>
+            </ul>
+          </p>
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text">Síguenos</h5>
+          <ul>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.facebook.com/Olvinj11/" target="_blank"><img src="app/img/facebook.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.instagram.com/olvinj11/" target="_blank"><img src="app/img/instagram.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://paypal.me/olvinvarillas11?country.x=HN&locale.x=es_XC" target="_blank"><img src="app/img/paypal.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://open.spotify.com/user/12173377132?si=cbed78944c8f4bf0" target="_blank"><img src="app/img/spotify.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://twitter.com/Olvinj11" target="_blank"><img src="app/img/gorjeo.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.twitch.tv/olvinj11" target="_blank"><img src="app/img/twitch.png" alt="" width="10%"></a></li>
+            <li style="display:inline; padding-left:3px; padding-right:3px;"><a class="grey-text text-lighten-3" href="https://www.tiktok.com/@olvinj11" target="_blank"><img src="app/img/linkedin.png" alt="" width="10%"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2022 Shirt Shop, All rights reserved. 
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
