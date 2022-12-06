@@ -36,14 +36,14 @@ if($stmt = $mysqli->prepare($strsql)){
             ?>
                     <a href="<?php echo $urlweb?>?modulo=detalle_productos&idproducto=<?php echo $idproducto ?>">
                         <div class="col s12 m6 l3.5">
-                            <div class="col s6">
+                            <div class="col s12 m6">
                                 <img class="responsive-img" src="<?php echo $url_imagen?>" alt="">
                             </div>
-                            <div class="col s6 black-text">
-                                <p><b><?php echo $nombre_producto ?></b></p>
+                            <div class="col s12 m6 black-text">
+                                <div class="card-panel blue-grey darken-4 white-text center-align"><?php echo $nombre_producto ?></div>
                                 <p><?php echo "L ".number_format($precio, 2) ?></p>
                             </div>
-                            <div class="col s6">
+                            <div class="col s12 m6">
                                 <a class="blue darken-3 btn"><i class="material-icons left">add_shopping_cart</i >AL CARRITO</a>
                             </div>
                         </div>

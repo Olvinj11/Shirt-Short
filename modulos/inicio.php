@@ -47,11 +47,12 @@ global $mysqli;
       while($stmt->fetch()){
         ?>
         <a href="?modulo=detalle_categorias&idcategoria=<?php echo $idcategoria ?>">
-          <div class="col s12 m6 l2">
+          <div class="col s6 m6 l2">
             <img class="responsive-img" src="<?php echo $url_icon?>" alt="" width="100px">
             <p class="black-text"><b><?php echo $nombre_categoria?></b></p>
           </div>
         </a>
+        
         <?php
       }
     }else{

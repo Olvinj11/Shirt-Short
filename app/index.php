@@ -19,7 +19,7 @@ global $urlweb;
       <div class="nav-wrapper">
         <div class=container>
           <ul class="hide-on-med-down">
-            <li><a href="<?php echo $urlweb?>" class="brand-logo center-align"><img src="app/img/LOGO-B.png" alt="" width="85%"></a></li>
+            <li><a href="<?php echo $urlweb?>" class="brand-logo center-align"><img src="app/img/LOGO-B.png" alt="" width="78%"></a></li>
           </ul>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
@@ -31,19 +31,17 @@ global $urlweb;
     </nav>
   </div>
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Notificaciones</a></li>
-    <li><a href="badges.html">Carrito</a></li>
+    <li><a href="<?php $urlweb ?>?modulo=admin_productos">Iniciar Sesion</a></li>
+    <li><a href="badges.html">Mi Carrito</a></li>
   </ul>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.slider');
       var instances = M.Slider.init(elems);
     });
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.dropdown-trigger');
-      var instances = M.Dropdown.init(elems);
+    $(document).ready(function(){
+      $('.sidenav').Sidenav();
     });
-
   </script>
   
   <div class="container">
