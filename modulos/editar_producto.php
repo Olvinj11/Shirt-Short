@@ -16,33 +16,32 @@ if($stmt = $mysqli->prepare($strsql)){
                 <div class="row center">
                     <div class="col s12 card-panel black"><h5 class="white-text">Actualizar Producto</h5><h5></h5></div>
                     <div class="input-field col l10 m12 s12">
-                        <input placeholder="" name="nombre_producto" type="text" class="validate">
-                        <?php echo $nombre_producto ?>
+                        <input placeholder="" name="nombre_producto" type="text" class="validate" value="<?php echo $nombre_producto ?>">
+                        
                         <label>Nombre del Producto</label>
                     </div>
                     <div class="input-field col l2 m6 s12">
-                        <input placeholder="" name="idcategoria" type="text" class="validate">
-                        <?php echo $categoria ?>
+                        <input placeholder="" name="idcategoria" type="text" class="validate" value="<?php echo $categoria ?>">
                         <label>Id de Categoria</label>
                     </div>
                     <div class="input-field col l6 m6 s12">
-                        <input placeholder="" name="url_imagen" type="text" class="validate">
-                        <?php echo $url_imagen ?>
+                        <input placeholder="" name="url_imagen" type="text" class="validate" value=" <?php echo $url_imagen ?>">
+                       
                         <label>URL de Imagen</label>
                     </div>
                     <div class="input-field col l3 m6 s12">
-                        <input placeholder="" name="precio" type="text" class="validate">
-                        <?php echo $precio ?>
+                        <input placeholder="" name="precio" type="text" class="validate" value="<?php echo $precio ?>">
+                        
                         <label>Precio</label>
                     </div>
                     <div class="input-field col l3 m6 s12">
-                        <input placeholder="" name="cantidad" type="text" class="validate">
+                        <input placeholder="" name="cantidad" type="text" class="validate" value=" <?php echo $cantidad ?>">
                         <label>Cantidad</label>
-                        <?php echo $cantidad ?>
+                       
                     </div>
                     <div class="input-field col l12 m12 s12">
-                        <input placeholder="" name="descripcion" type="text" class="validate">
-                        <?php echo $descripcion?>
+                        <input placeholder="" name="descripcion" type="text" class="validate" value="<?php echo $descripcion?>">
+                        
                         <label>Descripcion del Producto</label>
                     </div>
                     <a class="waves-effect black btn" href="?modulo=admin_productos">Volver atras</a>
